@@ -2,20 +2,10 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiClock, FiInfo } from 'react-icons/fi';
 import { Map, Marker, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
-
-import mapMarkerImg from '../../images/map-marker.svg';
 
 import './index.css';
 import Sidebar from '../../components/Sidebar';
-
-const happyMapIcon = L.icon({
-  iconUrl: mapMarkerImg,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60],
-});
+import mapIcon from '../../utils/mapIcon';
 
 export default function Orphanage() {
   return (
@@ -90,7 +80,7 @@ export default function Orphanage() {
                 />
                 <Marker
                   interactive={false}
-                  icon={happyMapIcon}
+                  icon={mapIcon}
                   position={[-27.2092052, -49.6401092]}
                 />
               </Map>
@@ -117,7 +107,9 @@ export default function Orphanage() {
               </div>
               <div className="open-on-weekends">
                 <FiInfo size={32} color="#39CC83" />
-                Atendemos <br />
+                Atendemos
+{' '}
+<br />
                 fim de semana
               </div>
             </div>
