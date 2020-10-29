@@ -11,7 +11,6 @@ import mapMarkerImg from '../../images/map-marker.svg';
 
 import mapIcon from '../../utils/mapIcon';
 import api from '../../services/api';
-import Orphanage from '../Orphanage';
 
 interface Orphanage {
   id: number;
