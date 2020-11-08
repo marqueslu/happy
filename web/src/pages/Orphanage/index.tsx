@@ -91,7 +91,7 @@ export default function Orphanage() {
                 <Marker
                   interactive={false}
                   icon={mapIcon}
-                  position={[-27.2092052, -49.6401092]}
+                  position={[orphanage.latitude, orphanage.longitude]}
                 />
               </Map>
 
